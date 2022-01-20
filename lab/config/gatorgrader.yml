@@ -1,0 +1,17 @@
+---
+name: cmpsc-100-week-0-lab
+break: true
+indent: 4
+---
+    
+cage/the_maltese_python.png:
+    ConfirmFileExists
+
+week-0-lab.ipynb:
+    ConfirmFileExists
+    CountMarkdownTags --tag image --count 1 --exact
+
+writing/reflection.md:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+    CountFileWords --count 200

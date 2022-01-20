@@ -1,0 +1,30 @@
+---
+name: cmpsc-100-week-0-configuration
+break: true
+indent: 4
+---
+
+activities/activity-2-basic-terminal.ipynb:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+
+activities/activity-3a-markdown.md:
+    ConfirmFileExists
+    CountMarkdownTags --tag "heading" --count 3
+    CountMarkdownTags --tag "list" --count 2
+    CountMarkdownTags --tag "image" --count 1
+    CountFileParagraphs --count 1
+    
+lab/cage/the_maltese_python.png:
+    ConfirmFileExists
+
+lab/week-0-lab.ipynb:
+    ConfirmFileExists
+    CountMarkdownTags --tag image --count 1 --exact
+
+lab/writing/reflection.md:
+    ConfirmFileExists
+    MatchFileFragment --fragment "TODO" --count 0 --exact
+    CountFileWords --count 200
+    
+CountCommits --count 5
